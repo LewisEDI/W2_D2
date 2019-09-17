@@ -8,7 +8,7 @@ require_relative("../Fish.rb")
 class BearTest < MiniTest::Test
 
   def setup()
-    @bear = Bear.new("Ben")
+    @bear = Bear.new("Ben", "Brown")
     @fish = Fish.new("Cod")
     # @river = River.new("Dee")
 
@@ -16,6 +16,10 @@ class BearTest < MiniTest::Test
 
   def test_bear_name()
     assert_equal("Ben", @bear.name)
+  end
+
+  def test_bear_type()
+    assert_equal("Brown", @bear.type)
   end
 
   def test_stomach()
@@ -29,5 +33,5 @@ class BearTest < MiniTest::Test
   end
 
 
-  
+
 end
